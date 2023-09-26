@@ -1,12 +1,12 @@
 # main.py
 from pokemon_service import PokemonService
-# from pokemon_name_translator import PokemonNameTranslator
+from pokemon_name_translator import PokemonNameTranslator
 from pokemon_report import PokemonReport
 
 def main():
     # Initialize services
     pokemon_service = PokemonService()
-    # translator = PokemonNameTranslator()
+    translator = PokemonNameTranslator()
     report_generator = PokemonReport()
 
     # Get Pokemon information
