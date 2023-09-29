@@ -1,7 +1,10 @@
 # pokemon_report.py
 import pdfkit
 import os
-config = pdfkit.configuration(wkhtmltopdf=os.path.abspath(os.path.join("wkhtmltox", "bin","wkhtmltopdf.exe")))
+
+# config = pdfkit.configuration(wkhtmltopdf=os.path.abspath(os.path.join("wkhtmltox", "bin","wkhtmltopdf.exe")))
+config = ""
+
 
 class PokemonReport:
     def generate_report(self, pokemon_info, translated_name, output_pdf):
@@ -32,7 +35,8 @@ class PokemonReport:
         """
 
         # Create HTML report by substituting values into the template
-        html_report = html_template.format(translated_name=translated_name, pokemon_info=pokemon_info, abilities=abilities)
+        html_report = html_template.format(translated_name=translated_name, pokemon_info=pokemon_info,
+                                           abilities=abilities)
 
         # Save the HTML report to a file
         with open("report_template.html", "w", encoding="utf-8") as f:
